@@ -6,9 +6,12 @@
 # 1.1
 
 # File: greet.py
-# A simple greeting program #
+# A simple greeting program
+
+
 def greet(person):
-   print("Hello,",person) $$$
-   print("How are you?")
+    print("Hello,", person)
+    print("How are you?")
+
 
 greet("Josh")
