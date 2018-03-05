@@ -8,7 +8,7 @@
 # A simple program illustrating chaotic behavior.
 
 
-def main():
+def chaos():
 
     print("This program illustrates a chaotic function")
     x = float(input("Enter a number between 0 and 1: "))
@@ -18,4 +18,4 @@ def main():
         print(x)
 
 
-main()
+chaos()
