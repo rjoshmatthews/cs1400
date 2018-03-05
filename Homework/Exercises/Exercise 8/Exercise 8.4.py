@@ -46,6 +46,8 @@ def gcd(x, y):
 
 
 try:
+    # TODO: you should really listen to your old man...
+
     print("Please use only whole numbers")
     n = input("Please enter the first value: ")
     m = input("Please enter the second value: ")
