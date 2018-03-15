@@ -1,10 +1,10 @@
-def line_print(x, months):
-    y = x - 1
-    z = y + x
-    print(months, "\t\t", x, "\t", y, "\t", z)
-    x = y + x
-    months += 1
-    return x, months
+def fib(n):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fib(n-1)+fib(n-2)
 
 
 def table_title():
@@ -15,20 +15,22 @@ def summary(months):
     print("Cages will run out in month", months)
 
 
-while True:
-    a = 0
-    b = 1
-    c = a + b
-    month = 0
-    if month == 0:
-        table_title()
-        a = c
+a = 0
+b = 1
+c = a + b
+month = 0
+if a == 0:
+    table_title()
+    month += 1
+    a = b
+
+else:
+    while c <= 500:
+        c = fib(a)
+        b = c - a
+        print(month, "\t\t", a, "\t", b, "\t", c)
         month += 1
+        a = c
 
-    else:
-        while c >= 500:
-            line_print(a, month)
-            a = c
-            month += 1
+summary(month)
 
-        summary(month)
