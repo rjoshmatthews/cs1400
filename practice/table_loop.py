@@ -29,7 +29,7 @@ while int(total/2) < 500:
     parents += babies
 
     # calculate new babies from parents
-    babies = int(parents/2)
+    babies = int(parents/2)*2
     total = parents + babies
 
     print(month, "\t\t", parents, "\t\t", babies, "\t\t", total)
