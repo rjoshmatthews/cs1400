@@ -8,29 +8,31 @@ def fib(n):
 
 
 def table_title():
-    print("months\ta\tb\tc")
+    print("months\tparents\tbabies\ttotal")
 
 
 def summary(months):
     print("Cages will run out in month", months)
 
 
-a = 0
-b = 1
-c = a + b
-month = 0
-if a == 0:
-    table_title()
-    month += 1
-    a = b
 
-else:
-    while c <= 500:
-        c = fib(a)
-        b = c - a
-        print(month, "\t\t", a, "\t", b, "\t", c)
-        month += 1
-        a = c
+table_title()
+
+total = 2
+parents = 2
+month = 0
+babies = 0
+
+while int(total/2) < 500:
+    month += 1
+    # promote month old babies to parents.
+    parents += babies
+
+    # calculate new babies from parents
+    babies = int(parents/2)
+    total = parents + babies
+
+    print(month, "\t\t", parents, "\t\t", babies, "\t\t", total)
 
 summary(month)
 
